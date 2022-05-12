@@ -10,7 +10,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         drawerLayout = findViewById(R.id.drawer_layout);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        toolbar = findViewById(R.id.toolbar);
     }
 
     private void setupNavigation() {
@@ -44,28 +44,15 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,
-                R.id.nav_depos,
-                R.id.nav_book_depos,
-                R.id.nav_about,
-                R.id.nav_profile)
+                R.id.homeFragment,
+                R.id.depotFragment,
+                R.id.bookDepotFragment,
+                R.id.aboutUsFragment,
+                R.id.profileFragment)
                 .build();
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
-        NavigationUI.setupWithNavController(navigationDrawer, navController);
-        setBottomNavigationVisibility();
-    }
-
-    private void setBottomNavigationVisibility() {
-        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            final int id = destination.getId();
-            if (id == R.id.nav_home || id == R.id.nav_depos || id == R.id.nav_book_depos || id == R.id.nav_about || id == R.id.nav_profile) {
-                bottomNavigationView.setVisibility(View.VISIBLE);
-            } else {
-                bottomNavigationView.setVisibility(View.GONE);
-            }
-        });
     }
 
     @Override
@@ -80,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
         else
             super.onBackPressed();
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
