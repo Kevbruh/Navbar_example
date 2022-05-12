@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/drawable/ic_about.xml" value="0.148" />
+        <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/drawable/ic_book_depot.xml" value="0.148" />
+        <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/drawable/ic_depot.xml" value="0.148" />
         <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/drawable/ic_home.xml" value="0.1505" />
+        <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/drawable/ic_profile.xml" value="0.148" />
         <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
         <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/layout/fragment_about_us.xml" value="0.2546875" />
         <entry key="..\:/Users/Kevin/AndroidStudioProjects/Navbar_example/app/src/main/res/layout/fragment_book_depot.xml" value="0.2546875" />
